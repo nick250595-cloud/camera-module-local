@@ -1,37 +1,57 @@
 var exec = require('cordova/exec');
 
 var CameraModule = {
-  checkPermission: function(success, error) {
-    exec(success, error, 'CameraModule', 'checkPermission', []);
+
+  checkPermission: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'checkPermission', []);
+    });
   },
 
-  requestPermission: function(success, error) {
-    exec(success, error, 'CameraModule', 'requestPermission', []);
+  requestPermission: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'requestPermission', []);
+    });
   },
 
-  checkAndRequestPermission: function(success, error) {
-    exec(success, error, 'CameraModule', 'checkAndRequestPermission', []);
+  checkAndRequestPermission: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'checkAndRequestPermission', []);
+    });
   },
 
-  startPreview: function(success, error) {
-    exec(success, error, 'CameraModule', 'startPreview', []);
+  startPreview: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'startPreview', []);
+    });
   },
 
-  stopPreview: function(success, error) {
-    exec(success, error, 'CameraModule', 'stopPreview', []);
+  stopPreview: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'stopPreview', []);
+    });
   },
 
-  takePhotoBase64: function(success, error) {
-    exec(success, error, 'CameraModule', 'takePhotoBase64', []);
+  takePhotoBase64: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'takePhotoBase64', []);
+    });
   },
 
-  startBarcodeScan: function(success, error) {
-    exec(success, error, 'CameraModule', 'startBarcodeScan', []);
+  startBarcodeScan: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'startBarcodeScan', []);
+    });
   },
 
-  stopBarcodeScan: function(success, error) {
-    exec(success, error, 'CameraModule', 'stopBarcodeScan', []);
+  stopBarcodeScan: function () {
+    return new Promise(function (resolve, reject) {
+      exec(resolve, reject, 'CameraModule', 'stopBarcodeScan', []);
+    });
   }
 };
+
+// 👇 MUY IMPORTANTE para OutSystems
+window.CameraModule = CameraModule;
 
 module.exports = CameraModule;
