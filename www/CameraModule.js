@@ -51,7 +51,5 @@ var CameraModule = {
   }
 };
 
-// 👇 MUY IMPORTANTE para OutSystems
 window.CameraModule = CameraModule;
-
 module.exports = CameraModule;
