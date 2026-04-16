@@ -1,0 +1,13 @@
+{
+  "name": "camera-module-local",
+  "version": "1.0.0",
+  "description": "Local Cordova camera plugin",
+  "author": "Local",
+  "license": "MIT",
+  "cordova": {
+    "id": "camera-module-local",
+    "platforms": [
+      "android"
+    ]
+  }
+}

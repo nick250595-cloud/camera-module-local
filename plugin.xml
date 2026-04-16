@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="camera-module-local"
+        version="1.0.0">
+
+    <name>CameraModuleLocal</name>
+    <description>Local Cordova Camera Plugin</description>
+    <license>MIT</license>
+
+    <!-- JS -->
+    <js-module src="www/CameraModule.js" name="CameraModule">
+        <clobbers target="CameraModule" />
+    </js-module>
+
+    <platform name="android">
+
+        <!-- REGISTRO -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CameraModule">
+                <param name="android-package" value="camera.module.local.CameraModulePlugin" />
+            </feature>
+        </config-file>
+
+        <!-- PERMISOS -->
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+        </config-file>
+
+        <!-- JAVA -->
+        <source-file src="src/android/camera/module/local/CameraModulePlugin.java"
+                     target-dir="src/camera/module/local" />
+
+        <!-- DEPENDENCIAS -->
+        <framework src="androidx.camera:camera-core:1.3.4" />
+        <framework src="androidx.camera:camera-camera2:1.3.4" />
+        <framework src="androidx.camera:camera-lifecycle:1.3.4" />
+        <framework src="androidx.camera:camera-view:1.3.4" />
+        <framework src="androidx.exifinterface:exifinterface:1.3.7" />
+        <framework src="com.google.mlkit:barcode-scanning:17.2.0" />
+
+    </platform>
+
+</plugin>
