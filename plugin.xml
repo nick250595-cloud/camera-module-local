@@ -37,6 +37,7 @@
         <framework src="androidx.camera:camera-camera2:1.3.4" />
         <framework src="androidx.camera:camera-lifecycle:1.3.4" />
         <framework src="androidx.camera:camera-view:1.3.4" />
+	<framework src="com.google.mlkit:barcode-scanning:17.3.0" />
         <framework src="androidx.exifinterface:exifinterface:1.3.7" />
         <framework src="com.google.mlkit:barcode-scanning:17.2.0" />
 
